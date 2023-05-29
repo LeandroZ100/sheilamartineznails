@@ -14,74 +14,82 @@
 </head>
 
 <body>
-    <!--ENCABEZADO NAV-->
-    <header class="l-header" id="header">
-        <div class="navbar container flex">
+    <div class="container">
 
-            <!--LOGO LADO IZQUIERDO-->
-            <div class="brand">
-                <a href="#"><img src="assests/img/chica_blanco (2).ico" alt="Studio Hair"></a>
+        <header>
+            <nav>
+                <a href="#"><img class="logo" src="assests/img/chica_blanco (2).ico" alt="logo"></a>
+    
+                <div class="menu-container">
+                <button class="ham" type="button">   
+                    <span class="br-1"></span>
+                    <span class="br-2"></span>
+                    <span class="br-3"></span>
+                </button>    
+
+                <ul class="enlaces-menu">
+                    <li class="nav__item"><a href="#hero" class="nav__link active-link">Inicio</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link active-link">Sobre Mi</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link active-link">Servicios</a></li>
+                    <li class="nav__item"><a href="#package" class="nav__link active-link">Precios</a></li>
+                    <li class="nav__item"><a href="#gallery" class="nav__link active-link">Galeria</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link active-link">Contacto</a></li>
+                </ul>
             </div>
+                                   
+            </nav>
+        </header>
+        
 
-            <!--MENU HAMBURGUESA-->
-            <div class="nav" id="nav">
-                <button class="close__btn show-close-btn" id="close-btn" >X</button>
-                <ul class="nav__menu">
-                    <ul class="nav__menu">
-                        <li class="nav__item"><a href="#" class="nav__link active-link">Inicio</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">Sobre Mi</a></li>
-                        <li class="nav__item"><a href="#services" class="nav__link">Servicios</a></li>
-                        <li class="nav__item"><a href="#package" class="nav__link">Paquetes</a></li>
-                        <li class="nav__item"><a href="#gallery" class="nav__link">Galeria</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contacto</a></li>
-                    </ul>
-
-
-            </div>
-
-            <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-menu'></i>
-            </div>
-
-
-        </div>
-    </header>
-
-
-    <main>
         <!--HERO-->
-        <section class="hero">
-            <div class="container">
-                <div class="row">
-                    <div class="hero__img">
+        <section id="hero">
+            
+                <div class="fila">
+                    
+                    
+                    <div class="col">
+                        <div class="contenedor-img">
                         <img src="assests/img/logo_blancofuminado1.png" alt="">
+                        </div>
                     </div>
-                    <div class="hero__content">
+                    
+                    
+                    <div class="col">
                         <h1>Manicura Exclusiva<br><span>para Manos Sofisticadas...</span></h1>
                         <p>La creatividad en tus manos con manicura de alta gama y perfección en cada detalle.</p>
+                       
+                        <section id="conteiner_btn">
                         <a href="https://wa.me/1157048353?text=Hola,%20Shei%20vengo%20de%20tu%20Pagina%20Web%20y%20quiero%20agendar%20un%20horario%20para%20manicura.%20Tenes%20algun%20turno%20disponible?.%20De%20ser%20asi;%20En%20que%20horario?.%20Gracias..."
                             class="btn btn__outline"><i class='bx bxl-whatsapp'></i>Agende su horario</a>
-                    </div>
+                        </section>
+                        </div>
+                
                 </div>
         </section>
 
-        <!--QUIEN SOY-->
-        <section class="about section" id="about">
-            <div class="container">
-                <div class="row">
-                    <!--TITULO DE LA SECCION-->
-                    <div class="section__title">
-                        <h1>Sobre Mi</h1>
-                        <span>Sheila Martinez</span>
-                    </div>
-                    <div class="about__detail">
+
+
+
+
+
+            <!--QUIEN SOY-->
+        <section id="about">
+            
+             <!--TITULO DE LA SECCION-->
+             <div class="section__title">
+                <h1>Sobre Mi</h1>
+                <span>Sheila Martinez</span>
+            </div>
+            <div class="fila">             
+                <div class="about__detail">
                         <div class="about__detail__content">
-                            <!--IMAGEN LADO IZQUIERDO-->
+                               <!--IMAGEN LADO IZQUIERDO-->
                             <div class="about__img">
                                 <img src="assests/img/logo_circulo_sobremi.png" alt="">
                             </div>
                             <!--TEXTO DEL LADO IZQUIERDO-->
-                            <div class="about__descripion">
+
+                            <div class="about__description">
                                 <p>Bienvenidos a mi página web. Mi nombre es Sheila y me dedico al mundo de la manicura
                                     desde hace más de 7 años. En todo este tiempo, he logrado múltiples
                                     especializaciones y mi título máximo es una maestría que me avala para impartir
@@ -94,57 +102,67 @@
                                     encantada de ayudarte a lucir unas uñas perfectas y saludables. ¡Gracias por visitar
                                     mi página!</p>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                            
+                            </div>
+                     </div>
+                 </div>
+    </section>
 
 
         <!--ICONOS DE UÑAS (SERVICIOS)-->
         <section class="services section" id="services">
+            
             <div class="services__content">
+                
                 <div class="row">
+                        <!--TITULO DE SERVICIOS-->
+                    <div class="services__title">
 
-                    <!--TITULO DE SERVICIOS-->
                     <div class="section__title">
-                        <h1>Servicios</h1>
+                        <h1 class="section__title">Servicios</h1>
                         <span>Tendencia actualizada...</span>
+                    </div>
                     </div>
                 </div>
 
                 <!--GRILLA DE ICONOS-->
                 <div class="services__content__descripion grid container">
+                    
                     <div class="box">
                         <div class="inner">
                             <img src="assests/img/servicos/manicura.png" alt="">
                             <p>Esculpídas en gel</p>
                         </div>
                     </div>
+                    
                     <div class="box">
                         <div class="inner">
                             <img src="assests/img/servicos/clavos.png" alt="">
                             <p>Esculpídas en acrilico</p>
                         </div>
                     </div>
+                    
                     <div class="box">
                         <div class="inner">
                             <img src="assests/img/servicos/kapping-gel.png" alt="">
                             <p>Kapping Gel/Acrilico</p>
                         </div>
                     </div>
+                    
                     <div class="box">
                         <div class="inner">
                             <img src="assests/img/servicos/esmalte-de-unas.png" alt="">
                             <p>Esmaltado semipermanente</p>
                         </div>
                     </div>
+                    
                     <div class="box">
                         <div class="inner">
                             <img src="assests/img/servicos/manicuria-rusa.png" alt="">
                             <p>Manicuria Rusa/Express</p>
                         </div>
                     </div>
+                    
                     <div class="box">
                         <div class="inner">
                             <img src="assests/img/servicos/manicuria-combinada.png" alt="">
@@ -193,6 +211,8 @@
             <!--PAQUETES DE VENTA-->
 
         </section>
+
+
         <section class="package section" id="package">
             <div class="package_-content">
                 <div class="row">
@@ -341,7 +361,7 @@
                     </div>
                     
                 </div>
-                <div class="btn-container">
+                <div class="btn-container-fijo">
                     <a href="https://wa.me/1157048353?text=Hola,%20Shei%20vengo%20de%20la%20seccion%20de%20precios%20de%20tu%20Pagina%20Web%20y%20quiero%20consultarte%20por%20el%20precio%20de%20un%20servicio." class="btn">Contactame</a>
                   </div>
                   
@@ -349,6 +369,8 @@
 
             <!--GALERIA-->
         </section>
+
+
         <section class="gallery section" id="gallery">
             <div class="gallery__content">
                 <div class="row">
@@ -514,6 +536,8 @@
             </div>
             <!--TESTIMONIO ACADEMICO-->
         </section>
+
+
         <section class="testimonials section">
             <div class="testimonials__content">
                 <div class="row">
@@ -543,6 +567,17 @@
                             <div class="testimonials__descripition">
                                 <p>"Taller de Técnica en Gel Básica". Aprende a dominar técnicas avanzadas de asepsia, manejo de productos y conocimiento de materiales. Descubre la anatomía de la uña y sus patologías, perfecciona la colocación del molde y adquiere habilidades en limado, service y remoción. Obtén las bases necesarias para destacarte en la industria de la manicura profesional</p>
                             </div>
+                            <!-- Botones -->
+                    <section id="container_btn" class="btn-container>">
+                        <a download="Cv-resumido" href="#" class="btn-neon">
+                        <span id="span1"></span>
+                        <span id="span2"></span>
+                        <span id="span3"></span>
+                        <span id="span4"></span>
+                        Info del Curso
+                        </a>
+                    </section>
+
                         </div>
                     </div>
                     <!--TARJETA DE TESTIMONIO-->
@@ -562,6 +597,16 @@
                             <div class="testimonials__descripition">
                                 <p>"Taller de Técnica Acrílica Básica". Aprende a dominar técnicas avanzadas de asepsia, manejo de productos y conocimiento de materiales. Descubre la anatomía de la uña y sus patologías, perfecciona la colocación del molde y adquiere habilidades en limado, service y remoción. Consigue los cimientos imprescindibles para destacar en la industria de la manicura especializada.</p>
                             </div>
+                            <!-- Botones -->
+                    <section id="container_btn" class="btn-container>">
+                        <a download="Cv-resumido" href="#" class="btn-neon">
+                        <span id="span1"></span>
+                        <span id="span2"></span>
+                        <span id="span3"></span>
+                        <span id="span4"></span>
+                        Info del Curso
+                        </a>
+                    </section>
                         </div>
                     </div>
                     <!--TARJETA DE TESTIMONIO-->
@@ -581,17 +626,30 @@
                             <div class="testimonials__descripition">
                                 <p>"Taller de Tecnica Semipermanente, Kapping Gel y Acrilico".Explora mi curso de Semipermanente, Kapping Gel y Kapping Acrílico, donde aprenderás sobre la belleza de manos, la técnica de manicura rusa y el dominio del esmaltado Semipermanente y Kapping tanto en Gel como en Acrilico. Mejora tus habilidades y ofrece servicios de manicura de alta calidad.</p>
                             </div>
+                                                <!-- Botones -->
+                    <section id="container_btn" class="btn-container>">
+                        <a download="Cv-resumido" href="#" class="btn-neon">
+                        <span id="span1"></span>
+                        <span id="span2"></span>
+                        <span id="span3"></span>
+                        <span id="span4"></span>
+                        Info del Curso
+                        </a>
+                    </section>
                         </div>
+                        
                     </div>
+                    
                 </div>
-                <div class="btn-container">
+                <div class="btn-container-fijo">
                     <a href="https://wa.me/1157048353?text=Hola,%20Shei%20vengo%20de%20la%20seccion%20de%20Conocimientos%20de%20tu%20Pagina%20Web%20y%20quiero%20consultarte%20por%20el%20precio%20de%20un%20Curso." class="btn">Contactame</a>
                   </div>
             </div>
 
             <!--CONTACTO-->
         </section>
-    </main>
+
+    
     <footer class="footer" id="contact">
 
         <!--TODO EL CONTENIDO DE LA GRILLA-->
@@ -632,6 +690,7 @@
             <span>By leandrozarco</span>
         </div>
     </footer>
+</div>
     <!-- javascript -->
     <script src="assests/js/style.js"></script>
 </body>

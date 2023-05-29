@@ -1,3 +1,59 @@
+
+
+const ham = document.querySelector('.ham');
+const menuContainer = document.querySelector('.menu-container');
+const enlaces = document.querySelectorAll('.nav__link');
+
+const barras = document.querySelectorAll('.ham span');
+
+enlaces.forEach(enlace => {
+  enlace.addEventListener('click', () => {
+    menuContainer.classList.remove('menu-activo');
+    enlaces.classList.remove('activado');
+    barras.forEach(child => {child.classList.remove('animado')});
+    ham.classList.remove('girar');
+  });
+});
+
+ham.addEventListener('click', () => {
+  menuContainer.classList.toggle('menu-activo');
+    enlaces.classList.toggle('activado');
+    barras.forEach(child => {child.classList.toggle('animado')});
+    ham.classList.toggle('girar');
+});
+
+document.addEventListener('click', (event) => {
+  const target = event.target;
+  if (!menuContainer.contains(target) && !ham.contains(target)) {
+    menuContainer.classList.remove('menu-activo');
+    enlaces.classList.remove('activado');
+    barras.forEach(child => {child.classList.remove('animado')});
+    ham.classList.remove('girar');
+  }
+});
+
+
+
+/*==================== DEIXA O LINK CLICADO COM A CLASS ACTIVE-LINK ====================*/
+const linkColor = document.querySelectorAll('.nav__link')
+
+function colorLink(){
+  if(linkColor){
+      linkColor.forEach(L => L.classList.remove('active-link'))
+      this.classList.add('active-link')
+  }
+}
+
+linkColor.forEach(L=> L.addEventListener('click', colorLink))
+/*==================== MUDAR A COR DO HEADER ====================*/
+function scrollHeader(){
+  const scrollHeader = document.getElementById('header')
+  if(this.scrollY >= 100) scrollHeader.classList.add('scroll-header'); else scrollHeader.classList.remove('scroll-header')
+
+}
+window.addEventListener('scroll', scrollHeader)
+
+
 // Obtenemos las imágenes y el botón
 const gallery = document.querySelector('.gallery__list__img');
 const images = gallery.querySelectorAll('.gallery__img');
@@ -54,83 +110,25 @@ verMasBtn.addEventListener('click', mostrarImagenesRestantes);
 
 
 
-const navToggle = document.getElementById('nav-toggle');
-const navMenu = document.getElementById('nav');
-const closeBtn = document.getElementById('close-btn');
 
-navToggle.addEventListener('click', () => {
-  navMenu.classList.toggle('show-menu');
+window.addEventListener('DOMContentLoaded', () => {
+  const testimonialsContainer = document.querySelector('.testimonials-container');
+  const btnContainer = document.querySelector('#container_btn');
+  
+  // Función para comprobar el ancho de la ventana y mostrar u ocultar los elementos correspondientes
+  const handleResize = () => {
+    if (window.innerWidth < 500) {
+      testimonialsContainer.style.display = 'none'; // Oculta el contenedor de tarjetas
+      btnContainer.style.display = 'flex'; // Muestra el contenedor de botones
+    } else {
+      testimonialsContainer.style.display = 'grid'; // Muestra el contenedor de tarjetas
+      btnContainer.style.display = 'none'; // Oculta el contenedor de botones
+    }
+  };
+  
+  // Evento de cambio de tamaño de ventana
+  window.addEventListener('resize', handleResize);
+  
+  // Llamada inicial para comprobar el tamaño de la ventana al cargar la página
+  handleResize();
 });
-
-closeBtn.addEventListener('click', () => {
-  navMenu.classList.remove('show-menu');
-});
-
-/*------------ SHOW MENU-------------*/
-const showMenu = (toggleId, navId) => {
-    const toggle = document.getElementById(toggleId),
-        nav = document.getElementById(navId),
-        closeBtn = nav.querySelector(".close__btn"); // nuevo código
-    /*valida se se existe as variaveis*/
-    if (toggle && nav) {
-        /*aquí añado la clase show-menu en el div con la clase nav__menu*/
-        toggle.addEventListener('click', () => {
-            /*añadir la clase show-menu en el div que tiene el id nav-menu*/
-            nav.classList.toggle('show-menu');
-            closeBtn.classList.toggle("show-close-btn"); // nuevo código
-        })
-        closeBtn.addEventListener('click', () => {
-            nav.classList.remove('show-menu');
-        })
-    }
-}
-showMenu('nav-toggle', 'nav')
-
-/*------------ REMOVER MENU MOBILE -------------*/
-const navLink = document.querySelectorAll('.nav__link')
-function linkAction() {
-    const navMenu = document.getElementById('nav')
-    /*Al hacer clic en un enlace o en el botón de cierre se eliminará la clase show-menu*/
-    navMenu.classList.remove('show-menu')
-}
-
-const closeBtn2 = document.querySelector('.close__btn');
-if (closeBtn2) {
-    closeBtn2.addEventListener('click', () => {
-        nav.classList.remove('show-menu');
-    });
-}
-
-const hideMenu = (closeBtnId, navId) => {
-    const closeBtn = document.getElementById(closeBtnId),
-        nav = document.getElementById(navId);
-    if (closeBtn && nav) {
-        closeBtn.addEventListener('click', () => {
-            nav.remove();
-        });
-    }
-};
-hideMenu('close-btn', 'nav');
-
-
-
-navLink.forEach(n => n.addEventListener('click', linkAction))
-
-/*==================== DEJA EL ENLACE PULSADO CON LA CLASE ACTIVE-LINK ====================*/
-const linkColor = document.querySelectorAll('.nav__link')
-
-function colorLink() {
-    if (linkColor) {
-        linkColor.forEach(L => L.classList.remove('active-link'))
-        this.classList.add('active-link')
-    }
-}
-
-linkColor.forEach(L => L.addEventListener('click', colorLink))
-/*==================== CAMBIAR EL COLOR DE LA CABECERA ====================*/
-function scrollHeader() {
-    const scrollHeader = document.getElementById('header')
-    if (this.scrollY >= 100) scrollHeader.classList.add('scroll-header'); else scrollHeader.classList.remove('scroll-header')
-
-}
-window.addEventListener('scroll', scrollHeader)
