@@ -62,8 +62,10 @@ a{
     text-decoration: none;
 }
 .container{
-    max-width: 2000px;
-    margin: auto;
+    width:100%;
+    margin: 0;
+    padding: 0%;
+    box-sizing: inherit;
 }
 .row{
     display: flex;
@@ -313,7 +315,7 @@ a{
 
 /* ABOUT */
 #about{
-    padding: 40px;
+    padding: 0px;
     border-radius: 10px;
     background-image: url(../img/arabesco-left-bottom.svg);
     background-repeat: no-repeat;
@@ -460,6 +462,7 @@ a{
     width: 100%;
     background-color: var(--main-color);
     border-radius: 0 300px;
+    padding: 15vh 20px;
 }
 .package__cards{
     margin-top: var(--mb-2-5);
@@ -582,8 +585,19 @@ a{
   
 
 .gallery__content button{
+    display: block;
     margin: 0 auto;
+    /* Muestra el botón "ver más" */
 }
+
+.gallery__img {
+    display: none; /* Oculta todas las imágenes */
+  }
+
+  .gallery__img:nth-child(-n+4) {
+    display: block; /* Muestra las primeras 4 imágenes */
+  }
+
 
 
 
@@ -837,13 +851,17 @@ a{
 /* sección responsive */
 @media only screen and (max-width: 768px) {
 
+    .services__content__descripion{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
    
         .ham{
             display:block;
             cursor:pointer;
             position:absolute; 
-            top:15px;
-            right:25px;
+            top:25px;
+            right:50px;
             transition: 0.2s  0.1s;
             z-index: var(--Z-fixed);
         }
@@ -957,25 +975,13 @@ a{
        
    }
 /* Media query para resoluciones menores a 600px */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 670px) {
 
-    body {
-        width: 100vw;
-      }
-    .gallery__img {
-      display: none; /* Oculta todas las imágenes */
-    }
-  
-    .gallery__img:nth-child(-n+4) {
-      display: block; /* Muestra las primeras 4 imágenes */
-    }
-  
-    .gallery__content button {
-      display: block; /* Muestra el botón "ver más" */
-    }
-  }
+    
+}
 @media only screen and (max-width: 530px) {
 
+    
     
     .about__img {
     margin: 0; /* Elimina el margen superior e inferior */
@@ -1028,3 +1034,7 @@ a{
             grid-template-columns: repeat(1, 1fr);
 
 }}
+
+@media only screen and (max-width: 335px) {
+    
+}

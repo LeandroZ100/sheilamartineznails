@@ -1,5 +1,3 @@
-
-
 const ham = document.querySelector('.ham');
 const menuContainer = document.querySelector('.menu-container');
 const enlaces = document.querySelectorAll('.nav__link');
