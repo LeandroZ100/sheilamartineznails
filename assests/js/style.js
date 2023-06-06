@@ -30,6 +30,31 @@ document.addEventListener('click', (event) => {
   }
 });
 
+// Obtener el contenedor "about__description"
+const descriptionContainer = document.querySelector('.about__description');
+
+// Definir el texto corto
+const shortText = 'Bienvenidos a mi página web. Mi nombre es Sheila y me dedico al mundo de la manicura desde hace más de 7 años.Si buscas una experiencia única y profesional, no dudes en contactarme. Estaré encantada de ayudarte a lucir unas uñas perfectas y saludables. ¡Gracias por visitar mi página!';
+
+// Verificar si la resolución es menor al media query
+if (window.innerWidth <= 425) {
+  // Eliminar los elementos "p" adicionales
+  while (descriptionContainer.children.length > 1) {
+    descriptionContainer.removeChild(descriptionContainer.lastChild);
+  }
+
+  // Actualizar el contenido del primer elemento "p" con el texto corto
+  const paragraph = descriptionContainer.querySelector('p');
+  paragraph.textContent = shortText;
+}
+
+//Codigo que redirecciona a url en servicios
+
+function redirectToArticle(url) {
+  window.location.href = url;
+}
+
+
 
 
 /*==================== DEIXA O LINK CLICADO COM A CLASS ACTIVE-LINK ====================*/
@@ -130,3 +155,20 @@ window.addEventListener('DOMContentLoaded', () => {
   // Llamada inicial para comprobar el tamaño de la ventana al cargar la página
   handleResize();
 });
+
+document.getElementById("downloadBtn").addEventListener("click", function(event) {
+  event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+  
+  var downloadLink = this;
+  var pdfUrl = downloadLink.getAttribute("href");
+  
+  setTimeout(function() {
+    var a = document.createElement("a");
+    a.href = pdfUrl;
+    a.download = "Cv-resumido.pdf";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }, 1500); // 1.5 segundos = 1500 milisegundos
+});
+

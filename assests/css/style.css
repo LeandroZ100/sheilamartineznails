@@ -254,6 +254,20 @@ a{
   
   
 /* HERO */
+
+/* ---- particles.js---- */
+
+#particles-js {
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1 ;
+
+  }
+  
+
 #hero{
     background-color: var(--main-color);
     padding: 15vh 20px;
@@ -262,6 +276,9 @@ a{
     flex-direction: column;
     justify-content: center;
     margin-bottom: 40px;
+    position: relative;
+    z-index: 2;;
+    overflow: hidden;
 }
 #hero .fila {
     display: flex;
@@ -674,6 +691,7 @@ a{
 .testimonials__descripition p{
     line-height: var(--h2-font-size);
     margin-top: var(--mb-2);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .btn-neon{
@@ -834,6 +852,11 @@ a{
   }
 
 @media only screen and (max-width: 860px) {
+
+    #hero{
+        padding: 1vh 5vh 15vh 5vh;
+    }
+
 #hero .fila{
     display: block;
     text-align: center;
@@ -841,6 +864,11 @@ a{
 #hero .fila .col{
     width: 100%;
 }
+
+#hero .fila .col .contenedor-img img {
+    margin-right: -35px;
+  }
+
 #conteiner_btn{
     justify-content: center;
 }
@@ -849,7 +877,7 @@ a{
 }
 }
 /* sección responsive */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 790px) {
 
     .services__content__descripion{
         grid-template-columns: repeat(2, 1fr);
@@ -974,12 +1002,9 @@ a{
        transform:rotate(360deg);
        
    }
-/* Media query para resoluciones menores a 600px */
-@media only screen and (max-width: 670px) {
 
-    
-}
 @media only screen and (max-width: 530px) {
+
 
     
     
@@ -1035,6 +1060,14 @@ a{
 
 }}
 
-@media only screen and (max-width: 335px) {
-    
-}
+@media only screen and (max-width: 530px){
+  #hero{ 
+    border-radius: 0 0 210px 0;;
+}}
+
+@media only screen and (max-width: 425px) {
+    .about__description p:not(:first-child):not(:last-child) {
+      display: none;
+    }
+  }
+  
