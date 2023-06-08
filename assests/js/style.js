@@ -165,10 +165,38 @@ document.getElementById("downloadBtn").addEventListener("click", function(event)
   setTimeout(function() {
     var a = document.createElement("a");
     a.href = pdfUrl;
-    a.download = "Cv-resumido.pdf";
+    a.download = "Curso.pdf";
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
   }, 1500); // 1.5 segundos = 1500 milisegundos
 });
+
+// Obtén el elemento del botón
+var button = document.getElementById("downloadBtn");
+
+// Agrega un controlador de eventos para el evento scroll
+window.addEventListener("scroll", function() {
+    // Obtén la posición del botón en relación con la ventana de visualización
+    var buttonRect = button.getBoundingClientRect();
+
+    // Verifica si el botón está visible en la ventana de visualización
+    if (
+        buttonRect.top < window.innerHeight &&
+        buttonRect.bottom > 0 &&
+        !button.classList.contains("hover")
+    ) {
+        // Agrega la clase "hover" al botón para activar los efectos hover
+        button.classList.add("hover");
+    } else if (
+        (buttonRect.top >= window.innerHeight || buttonRect.bottom <= 0) &&
+        button.classList.contains("hover")
+    ) {
+        // Elimina la clase "hover" del botón si está fuera de la vista
+        button.classList.remove("hover");
+    }
+});
+
+
+
 

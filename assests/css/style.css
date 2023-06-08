@@ -696,7 +696,7 @@ a{
 
 .btn-neon{
     position: relative;
-    margin-top: 15px; /* Puedes ajustar este valor según sea necesario */
+    margin-top: 20px; /* Puedes ajustar este valor según sea necesario */
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -781,20 +781,79 @@ a{
     align-items: center;
     border-bottom: 1px solid var(--first-color);
 }
-.footer__data-social .social__icon{
-    color: var(--first-color);
-    font-size: var(--h2-font-size);
-}
-.footer__data-social .social__icon:hover{
-    border-bottom: 1px solid var(--first-color);
-}
+
 .footer__data{
     text-align: center;
     margin-bottom: var(--mb-1);
 }
-.footer__data-social{
-    margin-top: var(--mb-1);
+.wrapper{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
 }
+.wrapper ul{
+    list-style: none;
+}
+.wrapper ul li {
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
+    margin: 0 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 5px solid #d8e2dc;
+    float: left;
+    transition: all 0.5s ease;
+}
+
+.wrapper ul li .fa {
+color:#d8e2dc;
+margin-top: 20px;
+transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover.facebook {
+    border: 5px solid #3b5998;
+    box-shadow: 0 0 15px #3b5998;
+    transition: all 0.5s ease;
+}
+.wrapper ul li:hover .fa-facebook{
+    color:#3b5998;
+    text-shadow: 0 0 15px #3b5998;
+    transition: all 0.5s ease;
+}
+
+
+.wrapper ul li:hover.instagram {
+    border: 5px solid #bc2a8d;
+    box-shadow: 0 0 15px #bc2a8d;
+    transition: all 0.5s ease;
+}
+.wrapper ul li:hover .fa-instagram{
+    color:#bc2a8d;
+    text-shadow: 0 0 15px #bc2a8d;
+    transition: all 0.5s ease;
+     
+}
+
+
+.wrapper ul li:hover.wathsaap {
+    border: 5px solid #4dc247;
+    box-shadow: 0 0 15px #4dc247;
+    transition: all 0.5s ease;
+}
+.wrapper ul li:hover .fa-wathsaap{
+    color:#4dc247;
+    text-shadow: 0 0 15px #4dc247;
+    transition: all 0.5s ease;
+     
+}
+
+
+
 .footer__data h2{
     font-weight: var(--font-bold);
     font-size: var(--h2-font-size);
@@ -1063,11 +1122,16 @@ a{
 @media only screen and (max-width: 530px){
   #hero{ 
     border-radius: 0 0 210px 0;;
-}}
+}
+#hero .fila .col p {
+    margin-right: 0;  
+}
+}
 
 @media only screen and (max-width: 425px) {
     .about__description p:not(:first-child):not(:last-child) {
       display: none;
     }
+    
   }
   
